@@ -1,30 +1,22 @@
 function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
-    if (nums1.length > nums2.length) {
-      [nums1, nums2] = [nums2, nums1]; // Ensure nums1 is the shorter array
-    }
-  
     const m = nums1.length;
     const n = nums2.length;
+    const totalLength = m + n;
+    const isEven = totalLength % 2 === 0;
+  
     let left = 0;
-    let right = m;
+    let right = 0;
+    let current, prev;
   
-    while (left <= right) {
-      const i = Math.floor((left + right) / 2);
-      const j = Math.floor((m + n + 1) / 2) - i;
-      const maxLeft1 = (i === 0) ? -Infinity : nums1[i - 1];
-      const minRight1 = (i === m) ? Infinity : nums1[i];
-      const maxLeft2 = (j === 0) ? -Infinity : nums2[j - 1];
-      const minRight2 = (j === n) ? Infinity : nums2[j];
-  
-      if (maxLeft1 <= minRight2 && maxLeft2 <= minRight1) {
-        const maxLeft = Math.max(maxLeft1, maxLeft2);
-        const minRight = Math.min(minRight1, minRight2);
-        return (m + n) % 2 === 0 ? (maxLeft + minRight) / 2 : maxLeft;
-      } else if (maxLeft1 > minRight2) {
-        right = i - 1;
+    for (let i = 0; i <= totalLength / 2; i++) {
+      prev = current;
+      if (nums1[left] === undefined || nums2[right] < nums1[left]) {
+        current = nums2[right++];
       } else {
-        left = i + 1;
+        current = nums1[left++];
       }
     }
+  
+    return isEven ? (prev + current) / 2 : current;
   }
   
