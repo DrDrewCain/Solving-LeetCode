@@ -28,7 +28,7 @@ function removeElement(nums: number[], val: number): number {
 
 /**
  *  Alternative Solutional Approach
- *  Contains the same space and time complexity. 
+ * 
  */
 
 function removeElement2(nums: number[], val: number): number {
