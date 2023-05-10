@@ -1,12 +1,12 @@
 /**
  * @author Mark
- * @param target
+ * @param target 
  * @param numbers
  * This function finds two numbers in the array `numbers` that add up to the target `target`.
  * The function returns an array of two numbers, where the first number is the index of the first number in the array and the second number is the index of the second number in the array.
  * If there are no two numbers in the array that add up to the target, the function returns an empty array.
  */
-function twoSum(numbers: number[], target: number): number[] {
+function twoSumII(numbers: number[], target: number): number[] {
     // `left` is the index of the leftmost number in the array.
     let left = 0;
   
