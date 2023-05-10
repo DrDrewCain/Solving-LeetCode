@@ -4,7 +4,7 @@
  * @param nums The array to remove duplicates from.
  * @returns The number of elements in the array after removing duplicates.
  */
-function removeDuplicates(nums: number[]): number {
+function removeDuplicates2(nums: number[]): number {
     // Declare variables.
     let i = 0, // The index of the next element to be added to the array.
       j = 0; // The index of the current element in the array.
