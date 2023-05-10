@@ -1,6 +1,6 @@
 /**
  * This function calculates the values in Pascal's triangle.
- *
+ * @author Mark
  * @param n The number of rows in the triangle.
  * @returns An array of arrays, where each inner array contains the values in a row of the triangle.
  */
