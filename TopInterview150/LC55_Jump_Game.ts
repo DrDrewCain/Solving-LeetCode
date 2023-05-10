@@ -1,6 +1,8 @@
 /**
  * @author Mark
  * @param nums 
+ * Runtime: Time complexity O(n), Space complexity O(1) 
+ * This is the most optimal solution
  * Checks if it is possible to reach the last index of the array `nums`.
  * @returns `true` if it is possible, `false` otherwise.
  */
@@ -42,7 +44,7 @@ function canJump(nums: number[]): boolean {
  *
  * The function then returns the value of the `dp[0]` element.
  */
-function canJump(nums: number[]): boolean {
+function canJumpAlt(nums: number[]): boolean {
     const n = nums.length;
     // `dp[i]` stores whether we can reach the last index starting from index `i`.
     const dp = new Array<boolean>(n).fill(false);
