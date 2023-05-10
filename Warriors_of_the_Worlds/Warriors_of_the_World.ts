@@ -1,5 +1,7 @@
 /**
  * Here are the instructions on how to play the game:
+ * @author Mark
+ * YOU MAY NOT COPY THIS GAME WITHOUT EXPLICIT AUTHORIZATION FROM THE AUTHOR.
  * 
  * 1. Enter your userName.
  * 
@@ -30,7 +32,7 @@ enum PlayerType {
       magic: number;
       charisma: number;
       luck: number;
-      asshole: number;
+      badDogAttitude: number;
     };
     likeness?: boolean;
   }
@@ -43,7 +45,7 @@ enum PlayerType {
       magic: Math.floor(Math.random() * 10) + 1,
       charisma: Math.floor(Math.random() * 10) + 1,
       luck: Math.floor(Math.random() * 10) + 1,
-      asshole: Math.floor(Math.random() * 10) + 1,
+      badDogAttitude: Math.floor(Math.random() * 10) + 1,
     };
     const likeness = Math.random() > 0.5; // Random boolean value
     return { type, userName, health, strength, likeness};
