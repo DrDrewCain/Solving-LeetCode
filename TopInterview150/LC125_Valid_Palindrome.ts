@@ -3,7 +3,7 @@
  * @param s 
  * @returns 
  */
-function isPalindrome(s: string): boolean {
+function isPalindromeValid(s: string): boolean {
     // Convert all uppercase letters into lowercase letters.
     s = s.toLowerCase();
   
