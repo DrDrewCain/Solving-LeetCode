@@ -5,7 +5,7 @@
  * @returns 
  */
 
-function twoSum(num: number[], target: number): number[] {
+function twoSumI(num: number[], target: number): number[] {
     // This function finds two numbers in the array `num` that add up to the target `target`.
     // The function returns an array of two numbers, where the first number is the index of the first number in the array and the second number is the index of the second number in the array.
     // If there are no two numbers in the array that add up to the target, the function returns an empty array.
